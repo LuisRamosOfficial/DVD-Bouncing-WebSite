@@ -86,4 +86,4 @@ setInterval(() => {
 	} else if (x < 30 && y > window.innerHeight - 100) {
 		CornerHandler();
 	}
-}, 5);
+}, 10);
