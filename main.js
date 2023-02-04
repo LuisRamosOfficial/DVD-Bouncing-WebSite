@@ -13,7 +13,7 @@ let x = Math.random() * 300;
 let invertery = false;
 let inverterx = false;
 
-console.log(window.innerHeight - 102);
+console.log(dvd.clientHeight);
 
 const colors = [
 	'invert(40%) sepia(16%) saturate(2194%) hue-rotate(179deg) brightness(98%) contrast(89%)',
@@ -42,13 +42,12 @@ setInterval(() => {
 		y -= dy;
 	}
 	if (y <= 0) {
-		console.log(colors[color]);
 		invertery = false;
 		dvd.style.webkitFilter = colors[color];
 		dvd.style.mozFilter = colors[color];
 		color += 1;
 	}
-	if (y >= window.innerHeight - 88) {
+	if (y >= window.innerHeight - dvd.clientHeight + 15) {
 		invertery = true;
 		dvd.style.webkitFilter = colors[color];
 		dvd.style.mozFilter = colors[color];
@@ -68,7 +67,7 @@ setInterval(() => {
 		dvd.style.mozFilter = colors[color];
 		color += 1;
 	}
-	if (x >= window.innerWidth - 200) {
+	if (x >= window.innerWidth - dvd.clientWidth + 12) {
 		inverterx = true;
 		dvd.style.webkitFilter = colors[color];
 		dvd.style.mozFilter = colors[color];
@@ -79,11 +78,11 @@ setInterval(() => {
 
 	if (x < 30 && y < 30) {
 		CornerHandler();
-	} else if (x > window.innerWidth - 230 && y > window.innerHeight - 100) {
+	} else if (x > window.innerWidth - dvd.clientWidth - 5 && y > window.innerHeight - dvd.clientHeight - 5) {
 		CornerHandler();
-	} else if (x > window.innerWidth - 230 && y < 30) {
+	} else if (x > window.innerWidth - dvd.clientWidth - 5 && y < 30) {
 		CornerHandler();
-	} else if (x < 30 && y > window.innerHeight - 100) {
+	} else if (x < 30 && y > window.innerHeight - dvd.clientHeight - 5) {
 		CornerHandler();
 	}
 }, 10);
