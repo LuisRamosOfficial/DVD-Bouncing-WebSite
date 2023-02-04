@@ -76,13 +76,13 @@ setInterval(() => {
 
 	// Check Corners
 
-	if (x < 30 && y < 30) {
+	if (x < 5 && y < 5) {
 		CornerHandler();
 	} else if (x > window.innerWidth - dvd.clientWidth - 5 && y > window.innerHeight - dvd.clientHeight - 5) {
 		CornerHandler();
-	} else if (x > window.innerWidth - dvd.clientWidth - 5 && y < 30) {
+	} else if (x > window.innerWidth - dvd.clientWidth - 5 && y < 5) {
 		CornerHandler();
-	} else if (x < 30 && y > window.innerHeight - dvd.clientHeight - 5) {
+	} else if (x < 5 && y > window.innerHeight - dvd.clientHeight - 5) {
 		CornerHandler();
 	}
 }, 10);
