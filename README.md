@@ -1,4 +1,4 @@
-# DVD Logo Bouncing Celebration Website
+# DVD Logo Bouncing Website
 
 This website features a bouncing DVD logo that celebrates when it hits the corner of the screen. The website is built using HTML, SCSS, and JavaScript.
 
